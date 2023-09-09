@@ -1,5 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.2-SNAPSHOT'
+	id "io.github.juuxel.loom-vineflower" version "1.+" // Vineflower, a better decompiler
+	id "me.modmuss50.mod-publish-plugin" version "0.3.4" // https://github.com/modmuss50/mod-publish-plugin
 }
 
 archivesBaseName = archives_base_name
@@ -53,5 +55,34 @@ java {
 jar {
 	from("LICENSE") {
 		rename { "${it}_${archivesBaseName}" }
+	}
+}
+
+publishMods {
+	file = remapJar.archiveFile
+	version = "$mod_version-mc$minecraft_version"
+	type = STABLE
+	displayName = "Blåhaj Mod v$mod_version for $minecraft_version"
+	modLoaders.add("fabric")
+	modLoaders.add("quilt")
+
+	curseforge {
+		projectId = curseforge_id
+		accessToken = System.getenv("CURSEFORGE_TOKEN")
+		minecraftVersions.add(minecraft_version)
+
+		requires {
+			slug = "fabric-api"
+		}
+	}
+
+	modrinth {
+		projectId = modrinth_id
+		accessToken = System.getenv("MODRINTH_TOKEN")
+		minecraftVersions.add(minecraft_version)
+
+		requires {
+			slug = "fabric-api"
+		}
 	}
 }
