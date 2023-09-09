@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -28,16 +28,16 @@ public class Common implements ModInitializer {
 
 	public void onInitialize() {
 		Item grayShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.gray_shark.tooltip");
-		Registry.register(BuiltInRegistries.ITEM, asResource("gray_shark"), grayShark);
+		Registry.register(RegistryKeys.ITEM, asResource("gray_shark"), grayShark);
 
 		Item blueShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.blue_shark.tooltip");
-		Registry.register(BuiltInRegistries.ITEM, asResource("blue_shark"), blueShark);
+		Registry.register(RegistryKeys.ITEM, asResource("blue_shark"), blueShark);
 
 		Item blueWhale = new ItemContainerCuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.blue_whale.tooltip");
-		Registry.register(BuiltInRegistries.ITEM, asResource("blue_whale"), blueWhale);
+		Registry.register(RegistryKeys.ITEM, asResource("blue_whale"), blueWhale);
 
 		Item breadPillow = new CuddlyItem(new Item.Properties().stacksTo(1), null);
-		Registry.register(BuiltInRegistries.ITEM, asResource("bread"), breadPillow);
+		Registry.register(RegistryKeys.ITEM, asResource("bread"), breadPillow);
 
 		// Register items to item group
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register((content) -> {
