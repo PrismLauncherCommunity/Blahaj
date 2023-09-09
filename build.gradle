@@ -1,0 +1,57 @@
+plugins {
+	id 'fabric-loom' version '1.2-SNAPSHOT'
+}
+
+archivesBaseName = archives_base_name
+version = mod_version
+group = maven_group
+
+repositories {
+	maven { url = 'https://maven.parchmentmc.org' } // Parchment Mappings
+	maven { url = "https://maven.quiltmc.org/repository/release" } // Quilt Mappings
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${minecraft_version}" // Minecraft
+	mappings(loom.layered { // Mappings
+		it.mappings("org.quiltmc:quilt-mappings:${minecraft_version}+build.${qm_version}:intermediary-v2")
+		it.parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+		it.officialMojangMappings { nameSyntheticMembers = false }
+	})
+
+	modImplementation "net.fabricmc:fabric-loader:${loader_version}" // Fabric Loader
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}" // Fabric API
+}
+
+processResources {
+	Map<String, Object> properties = [
+		"version": version,
+		"minecraft_version": minecraft_version
+	]
+	properties.forEach((k, v) -> inputs.property(k, v))
+
+	filesMatching("fabric.mod.json") {
+		expand properties
+	}
+
+	duplicatesStrategy = DuplicatesStrategy.WARN
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+
+	it.options.release = 17
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+
+	withSourcesJar()
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${archivesBaseName}" }
+	}
+}

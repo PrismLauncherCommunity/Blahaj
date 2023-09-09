@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "blahaj",
+	"version": "${version}",
+	"name": "Blåhaj",
+	"description": "Soft toy, shark mod, 16px.",
+	"authors": [{
+		"name": "hibi",
+		"role": "Original Dev"
+	},
+  {
+   "name": "IThundxr",
+    "role": "Fabric Porter"
+  }],
+	"contributors": [{
+		"name": "infoplayerstart",
+		"role": "Translator"
+	}],
+	"contact": {
+		"issues": "https://github.com/PrismSMP/Blahaj/issues",
+		"sources": "https://github.com/PrismSMP/Blahaj"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [ "org.prismlauncher.blahaj.Common" ]
+	},
+	"mixins": [
+		"blahaj.mixins.json"
+	],
+	"depends": {
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+	}
+}
