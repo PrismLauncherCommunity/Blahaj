@@ -1,4 +1,4 @@
-name: Publish to CF & MR
+name: Publish to Modrinth
 on: [workflow_dispatch]
 
 jobs:
@@ -25,5 +25,4 @@ jobs:
       - name: Build & Release
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
-          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
         run: ./gradlew build publishMods
