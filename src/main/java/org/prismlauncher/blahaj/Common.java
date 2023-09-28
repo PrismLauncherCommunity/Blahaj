@@ -32,7 +32,7 @@ public class Common implements ModInitializer {
 		Registry.register(BuiltInRegistries.ITEM, asResource("blue_shark"), blueShark);
 
 		Item prideShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.pride_shark.tooltip");
-		Registry.register(BuiltInRegistries.ITEM, asResource("pride_shark"), transShark);
+		Registry.register(BuiltInRegistries.ITEM, asResource("pride_shark"), prideShark);
 
 		Item transShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.trans_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("trans_shark"), transShark);
