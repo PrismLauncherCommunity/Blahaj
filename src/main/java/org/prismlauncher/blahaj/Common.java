@@ -49,6 +49,28 @@ public class Common implements ModInitializer {
 		Item aroaceShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.aroace_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("aroace_shark"), aroaceShark);
 
+		Item genderqueerShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.genderqueer_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("genderqueer_shark"), genderqueerShark);
+
+		Item aroShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.aro_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("aro_shark"), aroShark);
+
+		Item aceShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.ace_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("ace_shark"), aceShark);
+
+		Item demisexualShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.demisexual_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("demisexual_shark"), demisexualShark);
+
+		Item demiromanticShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.demiromantic_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("demiromantic_shark"), demiromanticShark);
+
+		Item biShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.bi_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("bi_shark"), biShark);
+
+		Item gayShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.gay_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("gay_shark"), gayShark);
+
+
 		Item blueWhale = new ItemContainerCuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.blue_whale.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("blue_whale"), blueWhale);
 
