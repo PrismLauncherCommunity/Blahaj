@@ -89,6 +89,13 @@ public class Common implements ModInitializer {
 			content.accept(panShark);
 			content.accept(blueWhale);
 			content.accept(breadPillow);
+			content.accept(genderqueerShark);
+			content.accept(aroShark);
+			content.accept(aceShark);
+			content.accept(demisexualShark);
+			content.accept(demiromanticShark);
+			content.accept(biShark);
+			content.accept(gayShark);
 		});
 
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
