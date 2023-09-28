@@ -31,6 +31,24 @@ public class Common implements ModInitializer {
 		Item blueShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.blue_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("blue_shark"), blueShark);
 
+		Item transShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.pride_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("pride_shark"), transShark);
+
+		Item transShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.trans_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("trans_shark"), transShark);
+
+		Item enbyShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.enby_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("enby_shark"), enbyShark);
+
+		Item lesbianShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.lesbian_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("lesbian_shark"), lesbianShark);
+
+		Item panShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.pan_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("pan_shark"), panShark);
+
+		Item panShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.aroace_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("aroace_shark"), aroaceShark);
+
 		Item blueWhale = new ItemContainerCuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.blue_whale.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("blue_whale"), blueWhale);
 
@@ -41,6 +59,12 @@ public class Common implements ModInitializer {
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register((content) -> {
 			content.accept(blueShark);
 			content.accept(grayShark);
+			content.accept(prideShark);
+			content.accept(transShark);
+			content.accept(enbyShark);
+			content.accept(lesbianShark);
+			content.accept(aroaceShark);
+			content.accept(panShark);
 			content.accept(blueWhale);
 			content.accept(breadPillow);
 		});
