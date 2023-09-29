@@ -70,6 +70,24 @@ public class Common implements ModInitializer {
 		Item gayShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.gay_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("gay_shark"), gayShark);
 
+		Item polyShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.poly_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("poly_shark"), polyShark);
+
+		Item greyroseShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.greyrose_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("greyrose_shark"), greyroseShark);
+
+		Item greysexualShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.greysexual_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("greysexual_shark"), greysexualShark);
+
+		Item greyromanticShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.greyromantic_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("greyromantic_shark"), greyromanticShark);
+
+		Item agenderShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.agender_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("agender_shark"), agenderShark);
+
+		Item intersexShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.intersex_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("intersex_shark"), intersexShark);
+
 
 		Item blueWhale = new ItemContainerCuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.blue_whale.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("blue_whale"), blueWhale);
@@ -96,6 +114,12 @@ public class Common implements ModInitializer {
 			content.accept(demiromanticShark);
 			content.accept(biShark);
 			content.accept(gayShark);
+		    content.accept(polyShark);
+			content.accept(greyroseShark);
+			content.accept(greysexualShark);
+			content.accept(greyromanticShark);
+			content.accept(agenderShark);
+			content.accept(intersexShark);
 		});
 
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
