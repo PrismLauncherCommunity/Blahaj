@@ -52,6 +52,9 @@ public class Common implements ModInitializer {
 		Item genderqueerShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.genderqueer_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("genderqueer_shark"), genderqueerShark);
 
+		Item genderfluidShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.genderfluid_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("genderfluid_shark"), genderfluidShark);
+
 		Item aroShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.aro_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("aro_shark"), aroShark);
 
@@ -113,10 +116,13 @@ public class Common implements ModInitializer {
 			content.accept(blueWhale);
 			content.accept(breadPillow);
 			content.accept(genderqueerShark);
+			content.accept(genderfluidShark);
 			content.accept(aroShark);
 			content.accept(aceShark);
 			content.accept(demisexualShark);
 			content.accept(demiromanticShark);
+			content.accept(demigirlShark);
+			content.accept(demiboyShark);
 			content.accept(biShark);
 			content.accept(gayShark);
 		    content.accept(polyShark);
