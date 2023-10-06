@@ -60,6 +60,12 @@ public class Common implements ModInitializer {
 
 		Item demisexualShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.demisexual_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("demisexual_shark"), demisexualShark);
+		
+		Item demiboyShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.demiboy_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("demiboy_shark"), demiboyShark);
+		
+		Item demigirlShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.demigirl_shark.tooltip");
+		Registry.register(BuiltInRegistries.ITEM, asResource("demigirl_shark"), demigirlShark);
 
 		Item demiromanticShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.demiromantic_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("demiromantic_shark"), demiromanticShark);
@@ -87,7 +93,6 @@ public class Common implements ModInitializer {
 
 		Item intersexShark = new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.intersex_shark.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("intersex_shark"), intersexShark);
-
 
 		Item blueWhale = new ItemContainerCuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.blue_whale.tooltip");
 		Registry.register(BuiltInRegistries.ITEM, asResource("blue_whale"), blueWhale);

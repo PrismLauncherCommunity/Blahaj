@@ -1,6 +1,6 @@
 {
 	"parent": "blahaj:item/blue_shark",
 	"textures": {
-		"0": "blahaj:item/grey_r_shork.png_shork"
+		"0": "blahaj:item/grey_r_shork"
 	}
 }
